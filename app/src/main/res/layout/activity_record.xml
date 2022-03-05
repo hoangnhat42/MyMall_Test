@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/white"
+    tools:context=".RecordActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:indeterminate="true"
+        android:progressTint="@color/successGreen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+
+            <ImageView
+                android:id="@+id/record_header_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/home_illustration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_filename"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="32dp"
+                android:lineHeight="32dp"
+                android:text="Press the mic button \n to start recording"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/record_header_image" />
+
+            <Chronometer
+                android:id="@+id/record_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="64sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/record_filename" />
+
+            <ImageButton
+                android:id="@+id/record_btn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/record_btn_stopped"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/record_timer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleX="-1"
+        android:src="@drawable/arrawright"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:theme="@style/MatButton"
+    android:background="@drawable/paymentdialogdrawable"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Select Payment Method"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bothproducttextlistner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/copenRed"
+        android:textSize="10sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bothproducttextlistner">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/allmethodscards"
+                android:orientation="vertical">
+
+
+                <com.project.scan_on.MaterialCardTranslation
+                    android:id="@+id/pickanddrop"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/white"
+                    android:minHeight="80dp"
+                    app:cardElevation="1dp"
+                    android:tag="googlepay"
+                    app:rippleColor="@color/colorPrimary"
+                    app:strokeColor="#DCDCDC"
+                    app:strokeWidth="2dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/googlepayicon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+
+                            >
+
+
+                            <TextView
+                                android:id="@+id/textView40"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Pay with Google pay UPI"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:alpha="0.8"
+                                android:textSize="12sp"
+                                android:text="Pay money with google pay account. for this you must have google pay app"
+                                android:textColor="@color/black" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.project.scan_on.MaterialCardTranslation>
+
+                <com.project.scan_on.MaterialCardTranslation
+                    android:id="@+id/courier"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:checkable="true"
+                    android:minHeight="80dp"
+                    app:cardElevation="1dp"
+                    android:tag="paytm"
+                    app:rippleColor="@color/colorPrimary"
+                    app:strokeColor="#DCDCDC"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/paytmicon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+
+                            >
+
+
+                            <TextView
+                                android:id="@+id/teView40"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Paytm "
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textVew36"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:alpha="0.8"
+                                android:text="Pay money with paytm wallet or using credit or debit card"
+                                android:textSize="12sp"
+                                android:textColor="@color/black" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.project.scan_on.MaterialCardTranslation>
+
+
+                <com.project.scan_on.MaterialCardTranslation
+                    android:id="@+id/branchvisit"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/white"
+                    android:checkable="true"
+                    android:minHeight="80dp"
+                    app:cardElevation="1dp"
+                    android:tag="phonepe"
+                    app:rippleColor="@color/colorPrimary"
+                    app:strokeColor="#DCDCDC"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/phonepeicon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+
+                            >
+
+
+                            <TextView
+                                android:id="@+id/textVie40"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="PhonePe"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textViw36"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:alpha="0.8"
+                                android:textSize="12sp"
+                                android:text="Pay money using phonepe you may need debit or credit card for this payment."
+                                android:textColor="@color/black" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.project.scan_on.MaterialCardTranslation>
+
+
+                <com.project.scan_on.MaterialCardTranslation
+                    android:id="@+id/cod"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10sp"
+                    android:backgroundTint="@color/white"
+                    android:checkable="true"
+                    android:minHeight="60dp"
+                    app:cardElevation="1dp"
+                    android:tag="cod"
+                    app:rippleColor="@color/colorPrimary"
+                    app:strokeColor="#DCDCDC"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/deliverytruck" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+
+                            >
+
+
+                            <TextView
+                                android:id="@+id/codtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="COD (Cash On Delivery)"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/kkk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:alpha="0.8"
+                                android:textSize="12sp"
+                                android:text="Scan on also offers you the possibility,to pay through Cash On Delivery."
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.project.scan_on.MaterialCardTranslation>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/placeorder"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:paddingRight="6dp"
+            android:paddingLeft="6dp"
+            android:elevation="2dp"
+            android:padding="10dp"
+            android:text="Place Order"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:theme="@style/MatButton"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="10dp"
+            app:iconTint="@color/colorAccent"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/scrollView"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

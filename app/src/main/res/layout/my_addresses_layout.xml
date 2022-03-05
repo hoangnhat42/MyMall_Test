@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/slider_background"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/my_addresses"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="#0FBADD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/view_all_addresses_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:stateListAnimator="@null"
+        android:text="@string/view_all"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="1dp"
+        android:text="Aditya Raj"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="New mainpura,Danapur,Patna"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/address_pincode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_fullname" />
+
+    <TextView
+        android:id="@+id/address_pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="15dp"
+        android:text="801503"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
+</androidx.constraintlayout.widget.ConstraintLayout>

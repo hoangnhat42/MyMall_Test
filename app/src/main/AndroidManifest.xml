@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project.scan_on">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_round_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_round_icon"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <receiver android:name=".MyNetworkReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".Helper.MyUploadService"
+            android:exported="false" />
+        <activity android:name=".RecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:turnScreenOn="true"
+            ></activity>
+        <activity android:name=".PhoneLoginActivity" android:screenOrientation="portrait" />
+        <activity android:name=".NotificationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".SearchActivity" android:screenOrientation="portrait" />
+        <activity android:name=".UpdateUserInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".OTPverificationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".RechargeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ViewAllActivity" android:screenOrientation="portrait" />
+        <activity android:name=".MyAddressesActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddAddressActivity"
+            android:theme="@style/RedProgressbar" android:screenOrientation="portrait" />
+        <activity android:name=".DeliveryActivity" android:screenOrientation="portrait" />
+        <activity android:name=".OrderDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ProductDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".CategoryActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/paytmTheme"
+            tools:replace="android:theme" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <service
+            android:name=".MyFirebaseMessaging"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

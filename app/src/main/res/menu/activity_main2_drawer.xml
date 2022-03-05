@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_boomshopy"
+            android:icon="@mipmap/boomshopy_drawer"
+            android:title="@string/scan_on" />
+
+
+        <item
+            android:id="@+id/nav_recharge"
+            android:icon="@mipmap/my_wishlist"
+            android:title="Mobile recharge" />
+        <item
+            android:id="@+id/nav_my_account"
+            android:icon="@mipmap/my_account"
+            android:title="@string/my_account" />
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@mipmap/my_orders"
+            android:title="@string/my_orders" />
+        <item
+            android:id="@+id/nav_my_cart"
+            android:icon="@mipmap/cart_black"
+            android:title="@string/my_cart" />
+        <item
+            android:id="@+id/nav_my_wishlist"
+            android:icon="@mipmap/my_wishlist"
+            android:title="@string/my_wishlist" />
+        <item
+            android:id="@+id/nav_my_rewards"
+            android:icon="@mipmap/my_rewards"
+            android:title="@string/my_rewards" />
+        <item
+            android:id="@+id/audioorder"
+            android:icon="@drawable/ic_mic_none_black_24dp"
+            android:title="Audio Order" />
+
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/warranty"
+            android:title="Warranty Policy" />
+        <item
+            android:id="@+id/terms"
+            android:title="Terms and Conditions" />
+
+    </group>
+    <item
+        android:id="@+id/nav_sign_out"
+        android:icon="@mipmap/sign_out"
+        android:title="@string/sign_out" />
+
+
+</menu>
+

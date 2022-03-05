@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/phoneloginback"
+    tools:context=".PhoneLoginActivity">
+
+
+
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView15"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/mobilelogo"-->
+    <!--        tools:layout_editor_absoluteX="99dp"-->
+    <!--        tools:layout_editor_absoluteY="195dp" />-->
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/signinmaterialbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="data.json"
+        app:lottie_loop="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signinmaterialbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp"
+        android:padding="18dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:theme="@style/MatButton"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="10dp"
+        app:iconTint="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/skipbtnsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrawright" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

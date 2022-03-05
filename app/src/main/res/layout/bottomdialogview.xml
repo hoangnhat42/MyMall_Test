@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/round_dialog_shape"
+    >
+
+    <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+        android:id="@+id/voicePlayerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        app:enableVisualizer="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:playPauseBackgroundColor="@color/copenRed"
+        app:playProgressbarColor="@color/colorPrimary"
+        app:progressTimeColor="#000"
+        android:visibility="visible"
+        app:seekBarProgressColor="#000"
+        app:seekBarThumbColor="#FFC107"
+        app:shareBackgroundColor="@color/colorPrimary"
+        app:shareText="Send"
+        app:showShareButton="false"
+        app:showTiming="true"
+        app:timingBackgroundColor="#6AF7A0A0"
+        app:playPauseCornerRadius="12"
+        app:viewCornerRadius="12"
+        app:viewBackground="#9494CC"
+        app:visualizationNotPlayedColor="#FFFFFF"
+        app:visualizationPlayedColor="@color/successGreen" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete"
+            android:text="Delete"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/send"
+            android:backgroundTint="@color/successGreen"
+            android:textColor="@color/white"
+            android:text="Send"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

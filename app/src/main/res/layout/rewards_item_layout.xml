@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_background"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/coupen_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/my_rewards" />
+
+    <TextView
+        android:id="@+id/coupen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/discount"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/coupen_icon"
+        app:layout_constraintStart_toEndOf="@+id/coupen_icon"
+        app:layout_constraintTop_toTopOf="@+id/coupen_icon" />
+
+    <TextView
+        android:id="@+id/coupen_validity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:padding="4dp"
+        android:text="@string/till_20th_oct_2019"
+        android:textSize="12sp"
+        android:textColor="#03A9F4"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coupen_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/get_30_off_at_any_product_abobe_rs_300_and_below_rs_2000"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coupen_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

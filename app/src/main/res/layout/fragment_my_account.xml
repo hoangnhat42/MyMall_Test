@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/slider_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccountFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/profile_data_layout" />
+
+            <include layout="@layout/order_status_layout" />
+
+            <include android:visibility="gone" layout="@layout/your_recent_order_layout" />
+
+            <include layout="@layout/my_addresses_layout" />
+
+
+            <Button
+                android:id="@+id/sign_out_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/unsuccessred"
+                android:text="@string/sign_out"
+                android:textColor="#0FBADD"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

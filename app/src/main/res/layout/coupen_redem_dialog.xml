@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/select_color_or_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/your_coupen"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/coupens_recyclerview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/toggle_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:paddingLeft="9dp"
+        android:paddingTop="9dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/show_all" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coupens_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/reward_gradient_background"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_recyclerview"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/selected_coupen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reward_gradient_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coupens_recyclerview">
+
+        <include layout="@layout/mini_rewards_item_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/original_price"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_coupen" />
+
+    <TextView
+        android:id="@+id/finalprice_tv"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/final_price_after_coupen_redeemption"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toBottomOf="@+id/selected_coupen" />
+
+    <TextView
+        android:id="@+id/original_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="Rs.49999/-"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/discounted_price"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/discounted_price" />
+
+    <TextView
+        android:id="@+id/discounted_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:text="-"
+        android:textColor="#C956AF4C"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toBottomOf="@+id/finalprice_tv" />
+
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/make_sure_to_apply_this_coupen_in_your_cart"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/apply_or_remove_btns_containers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/original_price" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="."
+        android:textColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/discounted_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/discounted_price" />
+
+    <LinearLayout
+        android:id="@+id/apply_or_remove_btns_containers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discounted_price"
+        tools:visibility="gone">
+
+        <Button
+            android:id="@+id/remove_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:stateListAnimator="@null"
+            android:text="@string/remove" />
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:stateListAnimator="@null"
+            android:text="@string/apply" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

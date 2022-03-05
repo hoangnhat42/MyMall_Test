@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/refresh_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_recyclerView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_page_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFF"
+            android:visibility="visible" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/no_internet_connection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="#FFFDF8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/retry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:stateListAnimator="@null"
+        android:text="@string/retry"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:translationZ="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/refresh_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout4"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:background="#FCE8E9"-->
+    <!--        android:elevation="8dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/refresh_layout"-->
+    <!--        app:layout_scrollFlags="exitUntilCollapsed"-->
+    <!--        tools:visibility="visible">-->
+
+    <!--        <Button-->
+
+    <!--            android:id="@+id/walletmenu"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="#FFFFFF"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="Wallet"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:visibility="visible" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/buy_now_btn2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="#FFFFFF"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="Recharge"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:visibility="visible" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/buy_now_btn3"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="#FFFFFF"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="Bill Payment"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:visibility="visible" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/buy_now_btn4"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="#FFFFFF"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="Game"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:visibility="visible" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/buy_now_btn5"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="#FFFFFF"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="Help"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            tools:visibility="visible" />-->
+
+    <!--    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
